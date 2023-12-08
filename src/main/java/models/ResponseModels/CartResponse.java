@@ -1,15 +1,16 @@
 package models.ResponseModels;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthRegResponse {
-    @JsonProperty("Auth_token: dmVrYVN0ZXIxNzAyMzc1")
-    public String authToken;
-    public String errorMessage;
+public class CartResponse {
+    @JsonProperty("Items")
+    List<DataProductResponse> items;
+    String errorMessage;
 }
